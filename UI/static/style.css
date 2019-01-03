@@ -1,0 +1,138 @@
+.container{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  min-height: 100%;
+  /* margin-bottom: -50px; */
+  flex: 1 0 auto;
+}
+
+header{
+  background: #2F2FA2;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #F64C72 3px solid;
+}
+
+header a{
+  color: #F64C72;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+header li{
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float: left;
+}
+
+header #branding h1{
+  margin: 0;
+  float: right;
+  color: #F64C72
+}
+
+header nav{
+  float: right;
+  margin-top: 10px;
+}
+
+.avatar{
+  float: left;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.login-button {
+  background-color: #F64C72;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  padding-bottom: 10px;
+  margin-top: -30px;
+  height: auto;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
+.welcome{
+  background-image: url("../static/meetup.jpg");
+  image-resolution: from-image;
+  text-align:center;
+  height: 350px;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: none;
+  overflow: hidden;
+  color: #ffffff
+}
+
+.welcome h1{
+  padding: 30px;
+  padding-bottom: 20px;
+  font-size: 45px;
+}
+
+.welcome h3{
+  padding: 10px;
+}
+
+.meetup-box{
+  /* border: #F64C72 2px solid; */
+  padding-right: 20px;
+  width:30%;
+  text-align: center;
+  align-items: center;
+  /* margin: 0; */
+  float:left;
+}
+
+.meetups :hover{
+  box-shadow: 0 0 5px 2px #2F2FA2;
+}
+
+.meetup-box img{
+  image-resolution: from-image;
+  height: 250px;
+  width: 300px;
+  padding: 10px;
+}
+
+.meetup-box p{
+  padding:0;
+}
+
+.meetup-box figure{
+  padding-right: 10px;
+  margin-left: -20px;
+}
+
+#date{
+  font-weight: 1;
+}
+
+footer{
+   margin-bottom: -20px;
+    margin: 0;
+    border-top: #F64C72 3px solid;
+    text-align: center;
+    background-color: #2F2FA2;
+    color: #ffffff;
+    /* height: 8px; */
+    width: 100%;
+    /* flex-shrink: 0 */
+}
