@@ -1,3 +1,20 @@
+body{
+  font-family: Arial,sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+}
+
+nav li a{
+  font-size: 18px;
+}
+
+
 .container{
   width: 80%;
   margin: auto;
@@ -135,4 +152,52 @@ footer{
     /* height: 8px; */
     width: 100%;
     /* flex-shrink: 0 */
+}
+
+.loginbox{
+  background: #ffffff;
+  border: 1px solid #F64C72;
+  border-radius: 6px;
+  height: auto;
+  margin: 20px auto 0;
+  width: 298px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+.loginbox p{
+  margin: 0;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.loginbox input{
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.loginbox input[type='email'], input[type="password"], input[type="text"]{
+  border: none;
+  border-radius: 4px;
+  border-bottom: 1px solid #F64C72;
+  /* background-color: #ffffff */
+  background: transparent;
+  outline: none;
+  height: 20px;
+  color: black;
+  font-size: 16px;
+}
+
+.loginbox input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 30px;
+  background: #F64C72;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  margin-top: 40px;
 }
