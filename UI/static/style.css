@@ -25,7 +25,7 @@ nav li a{
 }
 
 header{
-  background: #2F2FA2;
+  background: #f4f4f4;
   color: #ffffff;
   padding-top: 30px;
   min-height: 70px;
@@ -52,7 +52,7 @@ header #branding{
 header #branding h1{
   margin: 0;
   float: right;
-  color: #F64C72
+  color: #F64C72;
 }
 
 header nav{
@@ -73,7 +73,7 @@ header nav{
 .login-button {
   background-color: #F64C72;
   border: none;
-  color: white;
+  color: black;
   padding: 15px 32px;
   padding-bottom: 10px;
   margin-top: -30px;
@@ -147,8 +147,8 @@ footer{
     margin: 0;
     border-top: #F64C72 3px solid;
     text-align: center;
-    background-color: #2F2FA2;
-    color: #ffffff;
+    background-color: #f4f4f4;
+    color: #F64C72;
     /* height: 8px; */
     width: 100%;
     /* flex-shrink: 0 */
