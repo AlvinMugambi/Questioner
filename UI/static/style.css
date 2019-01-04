@@ -248,3 +248,33 @@ footer{
   text-align: center;
   padding: 20px;
 }
+
+.separator{
+  height: 0;
+  width: 100%;
+  border-width: 1px 0 0;
+  border-color: #b3b3b3;
+  opacity: 0.3;
+  margin: 15px 0;
+  padding:0px;
+}
+
+.nav-meetup a{
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  /* padding: 14px 16px; */
+  padding-right: 15px;
+  padding-left: 10px;
+  text-decoration: none;
+  font-size: 15px;;
+  text-decoration: none;
+  margin-bottom: -18px;
+  margin-top: 20px;
+  border-right: #b3b3b3 1px solid;
+}
+
+.active{
+  background-color: #F64C72;
+}
