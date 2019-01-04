@@ -11,7 +11,7 @@ body{
 }
 
 nav li a{
-  font-size: 18px;
+  font-size: 15px;
 }
 
 
@@ -133,9 +133,8 @@ header nav{
   padding:0;
 }
 
-.meetup-box figure{
-  padding-right: 10px;
-  margin-left: -20px;
+.meetup-box a p{
+  text-decoration: none;
 }
 
 #date{
@@ -200,4 +199,52 @@ footer{
   font-size: 18px;
   border-radius: 20px;
   margin-top: 40px;
+}
+
+.meetup-container{
+  width: 100%;
+}
+
+.meetup-detail{
+  width: 70%;
+  float: left;
+
+}
+
+.meetup-detail img{
+  image-resolution: from-image;
+  width: 100%;
+  height: 500px;
+}
+
+.side-nav{
+  float: right;
+  width: 29%;
+}
+
+.attendance{
+  text-align: center;
+}
+
+.attendance button{
+  padding: 5px;
+  margin: 10px;
+}
+
+.attendance h3{
+  margin-bottom: 0;
+}
+
+.location{
+  margin-top: 20px;
+  text-align: center;
+  border: solid 2px #F64C72;
+  min-height: 350px;
+  width: 80%;
+  margin: auto;
+}
+
+#post-question-button{
+  text-align: center;
+  padding: 20px;
 }
