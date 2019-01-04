@@ -24,6 +24,10 @@ nav li a{
   flex: 1 0 auto;
 }
 
+.container h1{
+  margin-top: 5px;
+}
+
 header{
   background: #f4f4f4;
   color: #ffffff;
@@ -278,3 +282,52 @@ footer{
 .active{
   background-color: #F64C72;
 }
+
+.questions{
+  border-bottom: #b3b3b3 2px solid;
+  float:left;
+}
+
+.comment-button{
+  float:right;
+}
+
+.fa {
+  font-size: 70px;
+  cursor: pointer;
+  user-select: none;
+  float: left;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+.wrap{
+  padding-bottom: 5px;
+  width: 20%;
+}
+
+.count{
+  font-size: 20px;
+  font-weight: bold;
+  /* float: right; */
+  margin: 5px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
