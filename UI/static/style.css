@@ -308,6 +308,7 @@ footer{
   cursor: pointer;
   user-select: none;
   float: left;
+  margin: 5px;
 }
 
 .fa:hover {
