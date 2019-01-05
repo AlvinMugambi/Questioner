@@ -261,6 +261,7 @@ footer{
   opacity: 0.3;
   margin: 0;
   padding:0px;
+  padding-bottom: 10px;
 }
 
 .nav-meetup a{
