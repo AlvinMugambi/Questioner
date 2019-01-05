@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="../static/meeting.png" type="image/gif" sizes="16x16">
+    <title>Questioner | Browse Meetups</title>
+    <link rel="stylesheet" href="../static/style.css">
+  </head>
+  <body>
+    <header>
+        <div id="branding">
+          <a href="homepage.html"><img class= "avatar" src="../static/meeting.png" alt="coming soon"></a>
+          <h1>Questioner</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Welcome Admin</a></li>
+            <li><a href="login.html"><button class= "login-button" type="button" name="Login">Logout</button></a></li>
+
+          </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+      <div class= "nav-meetup">
+
+         <a href="admin_homepage.html"><h3>Meetups</h3></a>
+         <a class="active" href="create_meetup.html"><h3>Create a Meetup</h3></a>
+      </div>
+    </div>
+
+    <hr class="separator">
+
+    <div class="container">
+      <form class="" action="#" method="post">
+        <div class="create_meetup">
+          <h1>Post a Meetup</h1>
+          <h2>Meetup Title:</h2>
+          <input type="text" name="" value="" placeholder="Title">
+          <h2>Details:</h2>
+          <textarea name="meetup" rows="8" cols="80" placeholder="Give a description for this meetup.."></textarea>
+
+          <h2>Location:</h2>
+          <input type="text" name="" value="Location: "><br>
+          <h2>Location Description</h2>
+          <input type="text" name="" placeholder="Describe the building and near features for accessibility">
+          <h2>Time:</h2>
+          <input type="text" name="" value="Time:">
+          <h3>Tags:</h3>
+          <input type="text" name="" value="" placeholder="E.g Database, Python3, Sqlite, Git"><br>
+          <a href="#"><button type="button" name="post_meetup">Add screenshots</button></a>
+        </div>
+        <div class="post-meetup-button">
+          <button class= "login-button" type="button" name="Login">Post this Meetup</button></a>
+        </div>
+      </form>
+    </div>
+    <p></p>
+    <footer>
+      <p>Questioner &copy:2019</p>
+    </footer>
+
+  </body>
+  </html>
