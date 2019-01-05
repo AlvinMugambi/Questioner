@@ -290,6 +290,17 @@ footer{
 
 .comment-button{
   float:right;
+  width: 100%;
+}
+
+.comment-button input{
+  float: right;
+}
+
+.comment-button h4{
+  float: left;
+  width: 30%;
+  margin-top: 0;
 }
 
 .fa {
@@ -297,6 +308,7 @@ footer{
   cursor: pointer;
   user-select: none;
   float: left;
+  margin: 5px;
 }
 
 .fa:hover {
@@ -331,3 +343,4 @@ footer{
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
