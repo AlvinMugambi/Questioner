@@ -285,6 +285,7 @@ footer{
   opacity: 0.3;
   margin: 0;
   padding:0px;
+  margin-bottom: 10px;
 }
 
 .nav-meetup a{
@@ -367,4 +368,25 @@ footer{
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+.create_meetup input{
+    width:100%;
+    height: 30px;
+    background-color: white;
+}
+
+.create_meetup textarea{
+  width: 100%;
+}
+
+.create_meetup button{
+  margin-top: 15px;
+  margin-bottom: 30px;
+  width:100px;
+  height: 50px;
+}
+
+.post-meetup-button{
+  float: right;
 }
