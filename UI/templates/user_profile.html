@@ -2,9 +2,67 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="../static/meeting.png" type="image/gif" sizes="16x16">
+    <title>Questioner|profile</title>
+    <link rel="stylesheet" href="../static/style.css">
   </head>
   <body>
+    <header>
+        <div id="branding">
+          <a href="homepage.html"><img class= "avatar" src="../static/meeting.png" alt="coming soon"></a>
+          <h1>Questioner</h1>
+        </div>
+        <nav>
+          <ul>
+            <!-- <li><a href="login.html"><button class= "login-button" type="button" name="Login">Login</button></a></li> -->
+            <!-- <li><a href="signup.html">Sign Up</a></li> -->
+          </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+      <div class= "nav-meetup">
+
+         <a class="active" href="user_profile.html"><h3>My Meetups</h3></a>
+         <a href="#"><h3>Browse Meetups</h3></a>
+      </div>
+    </div>
+
+    <hr class="separator">
+
+    <div class="container">
+      <h2>You have posted 10 Questions</h2>
+      <h2>You have commented on 20 Questions</h2>
+      <h3>Here are the meetups you are scheduled to attend:</h3>
+      <div class="meetups">
+
+        <div class="meetup-box">
+            <a href="meetup.html"><img src="../static/meetup1.jpg" alt="coming soon"></a>
+              <p id=date>Thursday,7th Feb 2019</p>
+              <p>The annual Dev Fest</p>
+        </div>
+
+        <div class="meetup-box">
+          <a href="meetup.html"><img src="../static/meetup2.jpg" alt="coming soon"></a>
+            <p id=date>Friday,20th Feb 2019</p>
+            <p>The Python lovers</p>
+        </div>
+
+        <div class="meetup-box">
+          <img src="../static/meetup3.jpg" alt="coming soon">
+          <p id=date>Monday,3th May 2019</p>
+          <p>Ruby on Rails!</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <p></p>
+    <footer>
+      <p>Questioner &copy:2019</p>
+    </footer>
 
   </body>
 </html>
