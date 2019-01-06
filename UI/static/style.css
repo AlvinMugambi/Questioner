@@ -14,6 +14,10 @@ nav li a{
   font-size: 15px;
 }
 
+nav h3{
+  color: black;
+}
+
 
 .container{
   width: 80%;
@@ -26,6 +30,10 @@ nav li a{
 
 .container h1{
   margin-top: 10px;
+}
+
+.container h2 span{
+  color: #F64C72;
 }
 
 header{
@@ -138,30 +146,6 @@ header nav{
 }
 
 .meetup-box a p{
-  text-decoration: none;
-}
-
-.admin{
-  padding-right: 20px;
-  width:25%;
-  text-align: center;
-  align-items: center;
-  margin: 20px;
-  float:left;
-}
-
-.admin img{
-  image-resolution: from-image;
-  height: 200px;
-  width: 200px;
-  padding: 10px;
-}
-
-.admin p{
-  padding:0;
-}
-
-.admin a p{
   text-decoration: none;
 }
 
@@ -285,7 +269,7 @@ footer{
   opacity: 0.3;
   margin: 0;
   padding:0px;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .nav-meetup a{
@@ -316,9 +300,10 @@ footer{
 .comment-button{
   float:right;
   width: 100%;
+  overflow: hidden;
 }
 
-.comment-button input{
+.comment-button button{
   float: right;
 }
 
@@ -371,9 +356,9 @@ footer{
 }
 
 .create_meetup input{
-    width:100%;
-    height: 30px;
-    background-color: white;
+  width: 100%;
+  height: 40px;
+  background-color: white;
 }
 
 .create_meetup textarea{
@@ -381,13 +366,11 @@ footer{
 }
 
 .create_meetup button{
-  margin-top: 15px;
-  margin-bottom: 30px;
-  width:100px;
-  height: 50px;
+  margin: 20px;
+  margin-left: 0;
 }
 
-.post-meetup-button{
+#post-meetup-button{
   float: right;
 }
 
@@ -407,7 +390,6 @@ footer{
   background-color:#313131;
   overflow:auto;
 }
-
 img#close {
   position:absolute;
   right:-1px;
@@ -416,7 +398,6 @@ img#close {
   width: 40px;
   height: 40px;
 }
-
 div#popupComment {
   position:absolute;
   left:50%;
@@ -424,7 +405,6 @@ div#popupComment {
   margin-left:-202px;
   font-family:'Raleway',sans-serif;
 }
-
 #comment-form{
   width:500px;
   min-width:250px;
@@ -436,7 +416,7 @@ div#popupComment {
 }
 
 p {
-  margin-top:30px
+  margin-top:20px
 }
 
 #popupComment h2 {
