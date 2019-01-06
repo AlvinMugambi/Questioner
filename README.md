@@ -6,6 +6,7 @@ The admin can create meetups, and the users can post questions with regards to t
 The project is managed using Pivotal Tracker. You can view the board at https://www.pivotaltracker.com/n/projects/2235202.
 
 You can view the website here at https://alvinmugambi.github.io/Questioner/UI/templates/homepage.html
+
 **Features**
 
     Admin can create meetups
@@ -18,7 +19,7 @@ You can view the website here at https://alvinmugambi.github.io/Questioner/UI/te
 
 **Additional feature**
 
-    A user can reset their password in case the forgot
+    A user can reset their password in case the forget
 
 **Pre-requisites**
 
