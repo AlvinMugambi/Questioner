@@ -20,7 +20,7 @@ You can view the website here at https://alvinmugambi.github.io/Questioner/UI/te
 
 **Additional feature**
 
-    A user can reset their password in case the forget
+    A user can reset their password in case they forget
 
 **Pre-requisites**
 
