@@ -9,7 +9,8 @@ You can view the website here at https://alvinmugambi.github.io/Questioner/UI/te
 
 **Features**
 
-    Admin can create meetups
+    Admin can create a meetup
+    Admin can delete a meetup
     Users can sign up/ login
     Users can view available meetups
     Users can post a question to a meetup
