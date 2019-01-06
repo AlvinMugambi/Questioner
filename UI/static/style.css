@@ -97,6 +97,22 @@ header nav{
   border-radius: 4px;
 }
 
+#login-button{
+  background-color: #F64C72;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: auto;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
 .welcome{
   background-image: url("../static/meetup.jpg");
   image-resolution: from-image;
