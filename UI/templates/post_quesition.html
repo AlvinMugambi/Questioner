@@ -2,9 +2,46 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="../static/meeting.png" type="image/gif" sizes="16x16">
+    <title>Questioner | Post Question</title>
+    <link rel="stylesheet" href="../static/style.css">
   </head>
   <body>
+    <header>
+        <div id="branding">
+          <a href="homepage.html"><img class= "avatar" src="../static/meeting.png" alt="coming soon"></a>
+          <h1>Questioner</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Welcome Username</a></li>
+            <li><a href="login.html"><button class= "login-button" type="button" name="Login">Logout</button></a></li>
+
+          </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+      <form class="" action="#" method="post">
+        <div class="create_meetup">
+          <h1>Post a Question</h1>
+          <h2>Question Title:</h2>
+          <input type="text" name="" value="" placeholder="Title">
+          <h2>Details:</h2>
+          <textarea name="meetup" rows="8" cols="80" placeholder="Give a description for this meetup.."></textarea>
+          <h3>Tags:</h3>
+          <input type="text" name="" value="" placeholder="E.g Database, Python3, Sqlite, Git"><br>
+        </div>
+        <div id="post-question-button">
+          <button class= "login-button" type="button" name="Login">Post Question</button>
+        </div>
+      </form>
+    </div>
+    <p></p>
+    <footer>
+      <p>Questioner &copy:2019</p>
+    </footer>
 
   </body>
-</html>
+  </html>
