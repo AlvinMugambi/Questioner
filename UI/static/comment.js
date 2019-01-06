@@ -4,14 +4,14 @@ function check_empty() {
     alert("You haven't commented.");
 } else {
   document.getElementById('comment-form').submit();
-  alert("Form Submitted Successfully...");
+  alert("Comment Submitted Successfully...");
 }
 }
 //Function To Display Popup
 function div_show() {
-  document.getElementById('abc').style.display = "block";
+  document.getElementById('comment').style.display = "block";
 }
 //Function to Hide Popup
 function div_hide(){
-  document.getElementById('abc').style.display = "none";
+  document.getElementById('comment').style.display = "none";
 }
