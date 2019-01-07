@@ -139,6 +139,7 @@ header nav{
 .meetup-box{
   /* border: #F64C72 2px solid; */
   padding-right: 20px;
+  min-width: 300px;
   width:30%;
   text-align: center;
   align-items: center;
