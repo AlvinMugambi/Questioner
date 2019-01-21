@@ -97,6 +97,14 @@ header nav{
   border-radius: 4px;
 }
 
+.login-button:hover {
+  background-color: blue;
+}
+
+.attendance button:hover {
+  background-color: blue;
+}
+
 #login-button{
   background-color: #F64C72;
   border: none;
@@ -137,18 +145,16 @@ header nav{
 }
 
 .meetup-box{
-  /* border: #F64C72 2px solid; */
   padding-right: 20px;
   min-width: 300px;
   width:30%;
   text-align: center;
   align-items: center;
-  /* margin: 0; */
   float:left;
 }
 
 .meetups :hover{
-  box-shadow: 0 0 5px 2px #2F2FA2;
+  box-shadow: 0 0 5px 2px gray;
 }
 
 .meetup-box img{
