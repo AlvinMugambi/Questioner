@@ -18,6 +18,11 @@ nav h3{
   color: black;
 }
 
+#error{
+  color: red;
+  font-weight: bold;
+}
+
 
 .container{
   width: 80%;
