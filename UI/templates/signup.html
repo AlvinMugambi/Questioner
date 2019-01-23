@@ -22,16 +22,24 @@
 
     <section class="loginbox">
       <div class="container">
-        <form class="" action="user_profile.html">
-          <p>Name</p> <br>
-          <input type="text" name="Name" placeholder="Enter a Username" value=""><br>
+        <form class="signupform" action="user_profile.html">
+          <em id="error"></em>
+          <p></p>
+          <p>Firstname</p> <br>
+          <input type="text" id="firstname" name="firstname" placeholder="Enter your Firstnname" value="" required><br>
+          <p>Lastname</p> <br>
+          <input type="text" id="lastname" name="lastname" placeholder="Enter your lastname" value="" required><br>
+          <p>Username</p> <br>
+          <input type="text" id="username" name="username" placeholder="Enter a Username" value="" required><br>
           <p>Email</p> <br>
-          <input type="email" name="email" placeholder="Enter an Email.." value=""><br>
+          <input type="email" id="email" name="email" placeholder="Enter an Email.." value="" required><br>
+          <p>Phone Number</p> <br>
+          <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" value="" required><br>
           <p>Password</p> <br>
-          <input type="password" name="password" placeholder="Enter a password.." value="">
+          <input type="password" id="password" name="password" placeholder="Enter a password.." value="" required>
           <p>Confirm Password</p> <br>
-          <input type="password" name="Repassword" placeholder="Retype password.." value="">
-          <button class="login-button" type="submit" name="button">Submit</button>
+          <input type="password" id="confrimpassword" name="Repassword" placeholder="Retype password.." value="" required>
+          <button id="signupbutton" class="login-button" type="submit" name="button">Submit</button>
 
         </form>
       </div>
@@ -42,6 +50,7 @@
     <footer>
       <p>Questioner &copy:2019</p>
     </footer>
-
+    <script src="../static/signup.js" type="text/javascript">
+    </script>
   </body>
 </html>
