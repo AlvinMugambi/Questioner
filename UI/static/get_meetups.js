@@ -1,5 +1,26 @@
 getMeetups()
 
+function deleteMeetup(e) {
+  e.preventDefault()
+  var id = this.getAttribute('id');
+
+  // DELETE
+  let url = `http://127.0.0.1:5000/api/v2/meetups/${id}`;
+  fetch(url, {
+    method : 'DELETE',
+    headers : {
+      'Content-Type' : 'application/json',
+      'x-access-token' : `${localStorage.getItem('token')}`
+    }
+  })
+  .then((res) => res.json())
+  .then((data ) => {
+    if(data.status == 200){
+      window.location.href = "../templates/admin_homepage.html";
+    }
+  })
+
+}
 
 function getMeetups(){
   let url = 'http://127.0.0.1:5000/api/v2/meetups/upcoming';
@@ -42,6 +63,7 @@ function getMeetups(){
           inputNode.className = 'login-button delete-meetup'
           inputNode.value = 'Delete this meetup'
           inputNode.id = meetup.meetupId.toString()
+          inputNode.addEventListener('click', deleteMeetup)
 
           anchorNode.appendChild(imgNode)
           anchorNode.appendChild(dateNode)
