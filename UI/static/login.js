@@ -19,8 +19,8 @@ function login(event){
     if (data.status === 200){
       localStorage.setItem('token', data.token);
       window.location.href = "../templates/homepage.html";
-    } else if (data.error.toLowerCase().includes('or')){
-      window.alert(data.error)
+    } else if (data.data.toLowerCase().includes('or')){
+      window.alert(data.data)
     }
     else if (data.error.toLowerCase().includes('username')){
       window.alert(data.error)

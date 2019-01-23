@@ -36,23 +36,23 @@
       <form class="" action="#" method="post">
         <div class="create_meetup">
           <h1>Post a Meetup</h1>
-          <h2>Meetup Title:</h2>
-          <input type="text" name="" value="" placeholder="Title">
-          <h2>Details:</h2>
-          <textarea name="meetup" rows="8" cols="80" placeholder="Give a description for this meetup.."></textarea>
+          <h2>Meetup Topic:</h2>
+          <input id="meetup_topic" type="text" name="topic" value="" placeholder="Topic" required>
+          <!-- <h2>Details:</h2>
+          <textarea name="meetup" rows="8" cols="80" placeholder="Give a description for this meetup.."></textarea> -->
 
           <h2>Location:</h2>
-          <input type="text" name="" value="Location: "><br>
-          <h2>Location Description</h2>
-          <input type="text" name="" placeholder="Describe the building and near features for accessibility">
-          <h2>Time:</h2>
-          <input type="text" name="" value="Time:">
+          <input id="location" type="text" name="" placeholder="Location:" value="" required><br>
+          <!-- <h2>Location Description</h2>
+          <input type="text" name="" placeholder="Describe the building and near features for accessibility"> -->
+          <h2>Date:</h2>
+          <input id="meetup_date" type="text" name="" placeholder="Date:" value="" required>
           <h3>Tags:</h3>
-          <input type="text" name="" value="" placeholder="E.g Database, Python3, Sqlite, Git"><br>
+          <input id="tags" type="text" name="" value="" placeholder="E.g Database, Python3, Sqlite, Git" required><br>
           <a href="#"><button type="button" name="post_meetup">Add screenshots</button></a>
         </div>
         <div id="post-meetup-button">
-          <button class= "login-button" type="button" name="Login">Post this Meetup</button></a>
+          <button id="post_meetup" class= "login-button" type="button" name="Login">Post this Meetup</button></a>
         </div>
       </form>
     </div>
@@ -60,6 +60,8 @@
     <footer>
       <p>Questioner &copy:2019</p>
     </footer>
+    <script src="../static/create_meetup.js" type="text/javascript">
 
+    </script>
   </body>
   </html>
