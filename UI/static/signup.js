@@ -2,7 +2,7 @@ let signupbutton = document.getElementById('signupbutton').addEventListener('cli
 
 function signup(event){
   event.preventDefault();
-  let url = 'http://127.0.0.1:5000/api/v2/auth/signup';
+  let url = 'https://the-questioner-backend.herokuapp.com/api/v2/auth/signup';
 
   fetch(url, {
     method : 'POST',
@@ -23,12 +23,22 @@ function signup(event){
   .then((data ) => {
     if (data.status === 201){
       window.location.href = "../templates/login.html";
-    } else{
-    document.getElementById('error').innerHTML = data.error;
+    } else if(data.error.toLowerCase().includes('firstname')){
+      window.alert(data.error)
+    } else if(data.error.toLowerCase().includes('lastname')){
+      window.alert(data.error)
+    } else if(data.error.toLowerCase().includes('username')){
+      window.alert(data.error)
+    } else if(data.error.toLowerCase().includes('email')){
+      window.alert(data.error)
+    } else if(data.error.toLowerCase().includes('phone')){
+      window.alert(data.error)
+    } else if(data.error.toLowerCase().includes('match')){
+      window.alert(data.error)
+    } else if(data.error.toLowerCase().includes('password')){
+      window.alert(data.error)
     }
+
   })
 
-  .catch(error => {
-    console.error('Error:', error);
-  })
 }
