@@ -25,11 +25,14 @@
       <section class="loginbox">
         <div class="container">
           <form class="loginform">
-            <em id="error"></em>
+            <em id="wrongcredentials"></em>
             <p>Username</p> <br>
             <input type="username" id="username" name="username" placeholder="Enter your email" value=""><br>
+            <em id="usernameerror"></em>
             <p>Password</p> <br>
             <input type="password" id="password" name="password" placeholder="Enter password.." value=""><br>
+            <em id="passworderror"></em>
+            <p></p>
             <p></p>
             <button id="loginbutton" class="login-button" onclick="login()" type="submit" name="button">Submit</button>
             <p></p>
