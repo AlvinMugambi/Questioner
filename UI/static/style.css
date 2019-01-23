@@ -18,9 +18,8 @@ nav h3{
   color: black;
 }
 
-#error{
+em {
   color: red;
-  font-weight: bold;
 }
 
 
