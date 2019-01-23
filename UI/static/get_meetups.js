@@ -23,7 +23,7 @@ function deleteMeetup(e) {
 }
 
 function getMeetups(){
-  let url = 'http://127.0.0.1:5000/api/v2/meetups/upcoming';
+  let url = 'https://the-questioner-backend.herokuapp.com/api/v2/meetups/upcoming';
 
   fetch(url, {
     method : 'GET',
