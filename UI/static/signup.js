@@ -23,9 +23,22 @@ function signup(event){
   .then((data ) => {
     if (data.status === 201){
       window.location.href = "../templates/login.html";
-    } else{
-    document.getElementById('error').innerHTML = data.error;
+    } else if(data.error.toLowerCase().includes('firstname')){
+      window.alert(data.error)
+    } else if(data.error.toLowerCase().includes('lastname')){
+      window.alert(data.error)
+    } else if(data.error.toLowerCase().includes('username')){
+      window.alert(data.error)
+    } else if(data.error.toLowerCase().includes('email')){
+      window.alert(data.error)
+    } else if(data.error.toLowerCase().includes('phone')){
+      window.alert(data.error)
+    } else if(data.error.toLowerCase().includes('match')){
+      window.alert(data.error)
+    } else if(data.error.toLowerCase().includes('password')){
+      window.alert(data.error)
     }
+
   })
 
 }

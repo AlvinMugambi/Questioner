@@ -20,13 +20,13 @@ function login(event){
       localStorage.setItem('token', data.token);
       window.location.href = "../templates/homepage.html";
     } else if (data.error.toLowerCase().includes('or')){
-    document.getElementById('wrongcredentials').innerHTML = JSON.stringify(data.error);
+      window.alert(data.error)
     }
     else if (data.error.toLowerCase().includes('username')){
-    document.getElementById('usernameerror').innerHTML = data.error;
+      window.alert(data.error)
     }
     else if (data.error.toLowerCase().includes('password')){
-    document.getElementById('passworderror').innerHTML = data.error;
+      window.alert(data.error)
     }
   })
 
