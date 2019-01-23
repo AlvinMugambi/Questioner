@@ -19,8 +19,14 @@ function login(event){
     if (data.status === 200){
       localStorage.setItem('token', data.token);
       window.location.href = "../templates/homepage.html";
-    } else{
-    document.getElementById('error').innerHTML = data.error;
+    } else if (data.error.toLowerCase().includes('or')){
+    document.getElementById('wrongcredentials').innerHTML = JSON.stringify(data.error);
+    }
+    else if (data.error.toLowerCase().includes('username')){
+    document.getElementById('usernameerror').innerHTML = data.error;
+    }
+    else if (data.error.toLowerCase().includes('password')){
+    document.getElementById('passworderror').innerHTML = data.error;
     }
   })
 
