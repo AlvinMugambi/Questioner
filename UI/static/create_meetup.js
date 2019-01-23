@@ -21,26 +21,29 @@ function createMeetup(event){
   .then((res) => res.json())
   .then((data ) => {
     if (data.status === 201){
-      console.log(data);
       window.location.href = "../templates/admin_homepage.html";
     } else if (data.error.toLowerCase().includes('topic')){
-      window.alert(data.error)
-    }
-    else if (data.error.toLowerCase().includes('allowed')){
       window.alert(data.error)
     }
     else if (data.error.toLowerCase().includes('location')){
       window.alert(data.error)
     }
-    else if (data.error.toLowerCase().includes('date')){
+    else if (data.error.toLowerCase().includes('invalid')){
       window.alert(data.error)
     }
-    else if (data.error.toLowerCase().includes('invalid')){
+    else if (data.error.toLowerCase().includes('date')){
       window.alert(data.error)
     }
     else if (data.error.toLowerCase().includes('tags')){
       window.alert(data.error)
     }
+    else if (data.error.toLowerCase().includes('allowed')){
+      window.alert(data.error)
+    }
+    else if (data.message.toLowerCase().includes('token')){
+      window.alert(data.message)
+    }
+
   })
 
 }
