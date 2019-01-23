@@ -5,7 +5,7 @@ function deleteMeetup(e) {
   var id = this.getAttribute('id');
 
   // DELETE
-  let url = `http://127.0.0.1:5000/api/v2/meetups/${id}`;
+  let url = `https://the-questioner-backend.herokuapp.com/api/v2/meetups/${id}`;
   fetch(url, {
     method : 'DELETE',
     headers : {
