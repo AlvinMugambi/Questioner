@@ -32,15 +32,15 @@
     <hr class="separator">
 
 
-    <div class="meetup-container">
+    <div id="meetup-container">
       <div class="meetup-detail">
         <div class="container">
-          <h1>The Annual Dev Fest</h1>
+          <h1 id="topic">The Annual Dev Fest</h1>
         </div>
 
         <img  src="../static/meetup1.jpg" alt="coming soon">
         <div class="container">
-          <h3>Details</h3>
+          <h3 id="details">Details</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
@@ -50,18 +50,18 @@
       <div class="side-nav">
 
         <div class="attendance">
-          <h3>Are you going?</h3>
-          <button type="button" name="button">YES</button>
-          <button type="button" name="button">NO</button>
+          <h3 id="rsvp">Are you going?</h3>
+          <button id="yes" type="button" name="button">YES</button>
+          <button id="no" type="button" name="button">NO</button>
         </div>
 
-        <div id="post-question-button">
+        <div class="post-question-button">
           <a href="post_question.html"> <input class= "login-button" type="button" name="" value="Post a Question"></a>
 
         </div>
 
         <div class="location">
-          <p>Location: Nairobi, Westlands</p>
+          <p id="location">Location: Nairobi, Westlands</p>
           <p>Description: Near Mayfair Hotel</p>
           <p>Time:  2pm-5pm</p>
         </div>
@@ -74,6 +74,8 @@
     <footer>
       <p>Questioner &copy:2019</p>
     </footer>
+    <script src="../static/single_meetup.js" type="text/javascript">
 
+    </script>
   </body>
 </html>
