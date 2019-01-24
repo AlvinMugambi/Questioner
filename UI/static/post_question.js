@@ -20,10 +20,7 @@ function postQuestion(event){
     if (data.status === 201){
       console.log(data);
       window.location.href = "../templates/top_questions.html";
-    } else if (data.error.toLowerCase().includes('title')){
-      window.alert(data.error)
-    }
-    else if (data.error.toLowerCase().includes('body')){
+    } else if (data.error){
       window.alert(data.error)
     }
   })
