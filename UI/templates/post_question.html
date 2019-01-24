@@ -27,11 +27,9 @@
         <div class="create_meetup">
           <h1>Post a Question</h1>
           <h2>Question Title:</h2>
-          <input type="text" name="" value="" placeholder="Title">
+          <input id="title" type="text" name="" value="" placeholder="Title" required>
           <h2>Details:</h2>
-          <textarea name="question" rows="8" cols="80" placeholder="Give a description for this question.."></textarea>
-          <h3>Tags:</h3>
-          <input type="text" name="" value="" placeholder="E.g Database, Python3, Sqlite, Git"><br>
+          <textarea id="body" name="question" rows="8" cols="80" placeholder="Give a description for this question.." required></textarea>
         </div>
         <div id="post-question-button">
           <a href="top_questions.html"> <button class= "login-button" type="button" name="Login">Post Question</button></a>
@@ -42,6 +40,8 @@
     <footer>
       <p>Questioner &copy:2019</p>
     </footer>
+    <script src="../static/post_question.js" type="text/javascript">
 
+    </script>
   </body>
   </html>
