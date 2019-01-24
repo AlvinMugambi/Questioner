@@ -4,7 +4,7 @@ function Meetupdetails(e) {
   e.preventDefault()
   var id = this.getAttribute('id');
 
-  let url = `http://127.0.0.1:5000/api/v2/meetups/${id}`;
+  let url = `https://the-questioner-backend.herokuapp.com/api/v2/meetups/${id}`;
   fetch(url, {
     method : 'GET',
     headers : {
@@ -22,7 +22,7 @@ function Meetupdetails(e) {
 }
 
 function fetchMeetups(){
-  let url = 'http://127.0.0.1:5000/api/v2/meetups/upcoming';
+  let url = 'https://the-questioner-backend.herokuapp.com/api/v2/meetups/upcoming';
 
   fetch(url, {
     method : 'GET',
