@@ -2,7 +2,7 @@ var loginbutton = document.getElementById('loginbutton').addEventListener('click
 
 function login(event){
   event.preventDefault();
-  let url = 'https://the-questioner-backend.herokuapp.com/api/v2/auth/login';
+  let url = 'http://127.0.0.1:5000/api/v2/auth/login';
 
   fetch(url, {
     method : 'POST',

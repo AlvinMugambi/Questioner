@@ -2,12 +2,13 @@ var createmeetup = document.getElementById('post_meetup').addEventListener('clic
 
 function createMeetup(event){
   event.preventDefault();
-  let url = 'https://the-questioner-backend.herokuapp.com/api/v2/meetups';
+  let url = 'http://127.0.0.1:5000/api/v2/meetups';
 
   fetch(url, {
     method : 'POST',
     body : JSON.stringify({
       "topic": document.getElementById('meetup_topic').value,
+      "description": document.getElementById('description').value,
       "location": document.getElementById('location').value,
       "meetup_date": document.getElementById('meetup_date').value,
       "images": "pass for now",
