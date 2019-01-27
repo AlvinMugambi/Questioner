@@ -1,5 +1,47 @@
 fetchMeetups()
 
+function Meetupdetails() {
+  var id = this.getAttribute('id');
+  console.log(id);
+
+  let url = `http://127.0.0.1:5000/api/v2/meetups/${id}`;
+  fetch(url, {
+    method : 'GET',
+    headers : {
+      'Content-Type' : 'application/json',
+      'x-access-token' : `${localStorage.getItem('token')}`
+    }
+  })
+  .then((res) => res.json())
+  .then((data ) => {
+    if(data.status == 200){
+      console.log(data)
+      window.location.href = "../templates/meetup.html"
+
+      var topicNode = document.getElementById('topic')
+      topicNode.innerHTML = data.data.topic
+
+      var imgNode = document.createElement('img')
+      imgNode.src = '../static/meetup1.jpg'
+
+      var descriptionNode = document.getElementById('description')
+      descriptionNode.innerHTML = data.data.description
+
+      var locationNode = document.getElementById('location')
+      locationNode.innerHTML = `Location : ${data.data.meetupLocation}`
+
+      var dateNode = document.getElementById('date')
+      dateNode.innerHTML = `Date : ${data.data.meetupDate}`
+
+      var attendeesNode = document.getElementById('attendees')
+      attendeesNode.innerHTML = `Atttendees : ${data.data.Attendees}`
+
+    }
+  })
+
+}
+
+
 function fetchMeetups(){
   let url = 'http://127.0.0.1:5000/api/v2/meetups/upcoming';
 
@@ -25,7 +67,6 @@ function fetchMeetups(){
           var anchorNode = document.createElement('a')
           anchorNode.id = meetup.meetupId.toString()
           console.log(anchorNode.id)
-
           anchorNode.addEventListener('click', Meetupdetails)
 
           var imgNode = document.createElement('img')
@@ -54,41 +95,6 @@ function fetchMeetups(){
 
     } else if (data.data.toLowerCase().includes('scheduled')){
       window.alert(data.data)
-    }
-  })
-
-}
-
-
-function Meetupdetails() {
-  var id = this.getAttribute('id');
-  console.log(id);
-
-
-
-  let url = `http://127.0.0.1:5000/api/v2/meetups/${id}`;
-  fetch(url, {
-    method : 'GET',
-    headers : {
-      'Content-Type' : 'application/json',
-      'x-access-token' : `${localStorage.getItem('token')}`
-    }
-  })
-  .then((res) => res.json())
-  .then((data ) => {
-    if(data.status == 200){
-      console.log(data)
-      window.location.href = "../templates/meetup.html"
-
-      var topicNode = document.getElementById('topic')
-      topicNode.innerHTML = data.data.topic
-
-      var imgNode = document.createElement('img')
-      imgNode.src = '../static/meetup1.jpg'
-
-      var descriptionNode = document.getElementById('description')
-      descriptionNode.innerHTML = data.data.description
-
     }
   })
 

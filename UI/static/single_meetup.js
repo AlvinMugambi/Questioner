@@ -16,7 +16,7 @@ function Meetupdetails() {
   .then((data ) => {
     if(data.status == 200){
       console.log(data)
-
+      window.location.href = "../templates/meetup.html"
 
       var topicNode = document.getElementById('topic')
       topicNode.innerHTML = data.data.topic
