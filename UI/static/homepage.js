@@ -1,28 +1,7 @@
 fetchMeetups()
 
-function Meetupdetails(e) {
-  e.preventDefault()
-  var id = this.getAttribute('id');
-
-  let url = `https://the-questioner-backend.herokuapp.com/api/v2/meetups/${id}`;
-  fetch(url, {
-    method : 'GET',
-    headers : {
-      'Content-Type' : 'application/json',
-      'x-access-token' : `${localStorage.getItem('token')}`
-    }
-  })
-  .then((res) => res.json())
-  .then((data ) => {
-    if(data.status == 200){
-      window.location.href = "../templates/meetup.html";
-    }
-  })
-
-}
-
 function fetchMeetups(){
-  let url = 'https://the-questioner-backend.herokuapp.com/api/v2/meetups/upcoming';
+  let url = 'http://127.0.0.1:5000/api/v2/meetups/upcoming';
 
   fetch(url, {
     method : 'GET',
@@ -44,10 +23,8 @@ function fetchMeetups(){
           meetupNode.className = 'meetup-box'
 
           var anchorNode = document.createElement('a')
-          anchorNode.href = ""
           anchorNode.id = meetup.meetupId.toString()
-          console.log(anchorNode.id)
-          anchorNode.addEventListener('click', Meetupdetails)
+          anchorNode.href = "../templates/meetup.html?id=" + meetup.meetupId
 
           var imgNode = document.createElement('img')
           imgNode.src = '../static/meetup1.jpg'

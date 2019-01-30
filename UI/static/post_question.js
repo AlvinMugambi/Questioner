@@ -2,7 +2,7 @@ var postquestion = document.getElementById('post-question-button').addEventListe
 
 function postQuestion(event){
   event.preventDefault();
-  let url = `https://the-questioner-backend.herokuapp.com/api/v2/meetups/{}`;
+  let url = `http://127.0.0.1:5000/api/v2/meetups/{}`;
 
   fetch(url, {
     method : 'POST',

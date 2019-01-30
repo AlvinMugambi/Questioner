@@ -2,7 +2,7 @@ let signupbutton = document.getElementById('signupbutton').addEventListener('cli
 
 function signup(event){
   event.preventDefault();
-  let url = 'https://the-questioner-backend.herokuapp.com/api/v2/auth/signup';
+  let url = 'http://127.0.0.1:5000/api/v2/auth/signup';
 
   fetch(url, {
     method : 'POST',
