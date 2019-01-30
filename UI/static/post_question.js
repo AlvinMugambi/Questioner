@@ -2,7 +2,10 @@ var postquestion = document.getElementById('post-question-button').addEventListe
 
 function postQuestion(event){
   event.preventDefault();
-  let url = `http://127.0.0.1:5000/api/v2/meetups/{}`;
+
+  var id = location.search.split('id=')[1];
+  console.log(id);
+  let url = `http://127.0.0.1:5000/api/v2/meetups/${id}/questions`;
 
   fetch(url, {
     method : 'POST',
