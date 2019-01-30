@@ -1,7 +1,7 @@
 Meetupdetails()
 
 function Meetupdetails() {
-  var id = this.getAttribute('id');
+  var id = location.search.split('id=')[1];
   console.log(id);
 
   let url = `http://127.0.0.1:5000/api/v2/meetups/${id}`;
@@ -16,7 +16,6 @@ function Meetupdetails() {
   .then((data ) => {
     if(data.status == 200){
       console.log(data)
-      window.location.href = "../templates/meetup.html"
 
       var topicNode = document.getElementById('topic')
       topicNode.innerHTML = data.data.topic
