@@ -35,6 +35,9 @@ function Meetupdetails() {
       var attendeesNode = document.getElementById('attendees')
       attendeesNode.innerHTML = `Atttendees : ${data.data.Attendees}`
 
+      var post_question = document.getElementById('post-question-button')
+      post_question.href = "../templates/post_question.html?id=" + data.data.meetupId
+
     }
   })
 
