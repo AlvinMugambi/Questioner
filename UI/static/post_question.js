@@ -22,9 +22,11 @@ function postQuestion(event){
   .then((data ) => {
     if (data.status === 201){
       console.log(data);
-      window.location.href = "../templates/top_questions.html";
+      window.location.href = "../templates/top_questions.html?id=" + id;
     } else if (data.error){
       window.alert(data.error)
+    } else if (data.message){
+      window.alert(data.message)
     }
   })
 
