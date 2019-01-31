@@ -125,6 +125,10 @@ header nav{
   border-radius: 4px;
 }
 
+#yes {
+  margin-bottom: 20px;
+}
+
 .welcome{
   background-image: url("../static/meetup.jpg");
   image-resolution: from-image;
@@ -309,7 +313,18 @@ footer{
 
 #post-question-button{
   text-align: center;
-  padding: 20px;
+  margin-left: 25%;
+  margin-bottom: 20px;
+  background-color: #F64C72;
+  border: none;
+  color: black;
+  margin-top: 30px;
+  height: auto;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 4px;
 }
 
 .separator{
