@@ -8,7 +8,6 @@
     <title>Questioner|Comments</title>
     <link rel="stylesheet" href="../static/style.css">
     <script src="../static/comment.js"></script>
-    <script src="../static/question.js"></script>
   </head>
   <body>
     <header>
@@ -39,7 +38,7 @@
     <div class="meetup-container">
       <div class="meetup-detail">
         <div class="container">
-          <h1>The Annual Dev Fest</h1>
+          <h1 id="meetup-title">The Annual Dev Fest</h1>
           <h2>Question</h2>
           <hr class="separator">
 
@@ -50,23 +49,29 @@
         </div>
         <div class="container">
           <h2>Comments:</h2>
-          <div class="container">
+          <div id="cont" class="container">
+            <!-- <div id="comment-section">
+              <p id="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+            </div>
+
             <div id="comment-section">
-              <p id=question>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+              <p id="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
             </div>
 
             <div class="questions">
-              <p id=question>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+              <p id="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
             </div>
 
             <div class="questions">
-              <p id=question>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-            </div>
-
-            <div class="questions">
-              <p id=question>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-            </div>
+              <p id="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+            </div> -->
           </div>
+          <div class="coment">
+            <textarea id="commenthere" name="name" rows="8" cols="80" placeholder = "Add your comment"></textarea>
+            <p></p>
+            <button onclick="postComment()" class="login-button" type="button" name="button">Add Comment</button>
+          </div>
+
 
         </div>
 
@@ -101,6 +106,8 @@
     <footer>
       <p>Questioner &copy:2019</p>
     </footer>
+    <script src="../static/comment.js" "type="text/javascript">
 
+    </script>
   </body>
 </html>

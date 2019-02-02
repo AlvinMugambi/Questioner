@@ -2,7 +2,7 @@ fetchQuestions()
 
 function fetchQuestions(){
   var id = location.search.split('id=')[1];
-  console.log(id);
+  // console.log(id);
 
   let url = `http://127.0.0.1:5000/api/v2/meetups/${id}/questions`
 
@@ -84,8 +84,8 @@ function fetchQuestions(){
 
           var imgNode = document.createElement('img')
           imgNode.id = 'close'
-          imgNode.src = "close.png"
-          imgNode.addEventListener('click', div_hide)
+          imgNode.src = "../static/close.png"
+          // imgNode.addEventListener('click', div_hide)
 
           var boxtitleNode = document.createElement('h2')
           boxtitleNode.textContent = 'Comment'
@@ -105,7 +105,7 @@ function fetchQuestions(){
           var commentspageNode = document.createElement('div')
 
           var anchorcommentsNode = document.createElement('a')
-          anchorcommentsNode.href = 'comments_page.html'
+          anchorcommentsNode.href = "../templates/comments_page.html?id=" + question.questionId
 
           var commentcountNode = document.createElement('h4')
           commentcountNode.textContent = 'comments : 20'
@@ -114,7 +114,8 @@ function fetchQuestions(){
           postcommentNode.id = 'popup'
           postcommentNode.type = 'button'
           postcommentNode.innerHTML = 'comment'
-          postcommentNode.addEventListener('click', div_show)
+          postcommentNode.href = "../templates/top_questions.html?id=" + question.questionId
+          // postcommentNode.addEventListener('click', div_show)
 
           anchorcommentsNode.appendChild(commentcountNode)
           commentspageNode.appendChild(anchorcommentsNode)
@@ -159,6 +160,10 @@ function fetchQuestions(){
 
     } else if (data.data.toLowerCase().includes('yet')){
       window.alert(data.data)
+    } else if (data.error.toLowerCase().includes('found')){
+      window.alert(data.error)
+    } else if (data.message){
+      window.alert(data.message)
     }
 
   })
