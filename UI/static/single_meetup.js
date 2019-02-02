@@ -71,6 +71,9 @@ function RsvpYes(){
     else if (data.error){
       window.alert(data.error)
     }
+    else if (data.message){
+      window.alert(data.message)
+    }
   })
 }
 
@@ -96,6 +99,8 @@ function RsvpNo(){
     if (data.status === 200){
       nobutton.style.color = 'blue'
       document.getElementById('rsvps').innerHTML = ''
+    } else if (data.message){
+      window.alert(data.message)
     }
   })
 }
