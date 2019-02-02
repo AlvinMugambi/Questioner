@@ -4,7 +4,7 @@ function Meetupdetails() {
   var id = location.search.split('id=')[1];
   console.log(id);
 
-  let url = `http://127.0.0.1:5000/api/v2/meetups/${id}`;
+  let url = `https://the-questioner-backend.herokuapp.com/api/v2/meetups/${id}`;
   fetch(url, {
     method : 'GET',
     headers : {
@@ -51,7 +51,7 @@ function RsvpYes(){
 
   var id = location.search.split('id=')[1];
 
-  let url = `http://127.0.0.1:5000/api/v2/meetups/${id}/rsvps/yes`;
+  let url = `https://the-questioner-backend.herokuapp.com/api/v2/meetups/${id}/rsvps/yes`;
 
   fetch(url, {
     method : 'POST',
@@ -83,7 +83,7 @@ function RsvpNo(){
 
   var id = location.search.split('id=')[1];
 
-  let url = `http://127.0.0.1:5000/api/v2/meetups/${id}/rsvps/no`;
+  let url = `https://the-questioner-backend.herokuapp.com/api/v2/meetups/${id}/rsvps/no`;
 
   fetch(url, {
     method : 'POST',

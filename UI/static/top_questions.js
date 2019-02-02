@@ -4,7 +4,7 @@ function fetchQuestions(){
   var id = location.search.split('id=')[1];
   // console.log(id);
 
-  let url = `http://127.0.0.1:5000/api/v2/meetups/${id}/questions`
+  let url = `https://the-questioner-backend.herokuapp.com/api/v2/meetups/${id}/questions`
 
   fetch(url, {
     method : 'GET',
@@ -178,7 +178,7 @@ function fetchQuestions(){
 function upvote(){
   var id = this.getAttribute('id');
 
-  let url = `http://127.0.0.1:5000/api/v2/questions/${id}/upvote`
+  let url = `https://the-questioner-backend.herokuapp.com/api/v2/questions/${id}/upvote`
 
   fetch(url, {
     method : 'PATCH',
@@ -201,7 +201,7 @@ function upvote(){
 function downvote(){
   var id = this.getAttribute('id');
 
-  let url = `http://127.0.0.1:5000/api/v2/questions/${id}/downvote`
+  let url = `https://the-questioner-backend.herokuapp.com/api/v2/questions/${id}/downvote`
 
   fetch(url, {
     method : 'PATCH',
