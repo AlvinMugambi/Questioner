@@ -35,6 +35,8 @@ function fetchQuestions(){
 
           var thumbNode = document.createElement('i')
           thumbNode.className = 'fa fa-thumbs-up'
+          thumbNode.id = question.questionId
+          thumbNode.addEventListener('click', upvote)
 
           var likespanNode = document.createElement('span')
           likespanNode.className = 'tooltiptext'
@@ -52,6 +54,8 @@ function fetchQuestions(){
 
           var thumbdNode = document.createElement('i')
           thumbdNode.className = 'fa fa-thumbs-down'
+          thumbdNode.id = question.questionId
+          thumbdNode.addEventListener('click', downvote)
 
           var dislikespanNode = document.createElement('span')
           dislikespanNode.className = 'tooltiptext'
@@ -65,7 +69,7 @@ function fetchQuestions(){
           votesdivNode.ClassName = 'votes'
 
           var votespNode = document.createElement('p')
-          votespNode.textContent = 'Votes: '
+          votespNode.textContent = `Votes: `
 
           var votesspanNode = document.createElement('span')
           votesspanNode.textContent = question.votes
@@ -168,4 +172,49 @@ function fetchQuestions(){
 
   })
 
+}
+
+
+function upvote(){
+  var id = this.getAttribute('id');
+
+  let url = `http://127.0.0.1:5000/api/v2/questions/${id}/upvote`
+
+  fetch(url, {
+    method : 'PATCH',
+    headers : {
+      'Content-Type' : 'application/json',
+      'x-access-token' : `${localStorage.getItem('token')}`
+    }
+  })
+  .then((res) => res.json())
+  .then((data ) => {
+    if (data.error){
+      window.alert(data.error)
+    }
+
+  })
+}
+
+
+
+function downvote(){
+  var id = this.getAttribute('id');
+
+  let url = `http://127.0.0.1:5000/api/v2/questions/${id}/downvote`
+
+  fetch(url, {
+    method : 'PATCH',
+    headers : {
+      'Content-Type' : 'application/json',
+      'x-access-token' : `${localStorage.getItem('token')}`
+    }
+  })
+  .then((res) => res.json())
+  .then((data ) => {
+    if (data.error){
+      window.alert(data.error)
+    }
+
+  })
 }
