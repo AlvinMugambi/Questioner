@@ -5,7 +5,8 @@ body{
   padding: 0;
   margin: 0;
   height: 100%;
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
+  background-color: white;
   display: flex;
   flex-direction: column;
 }
@@ -30,6 +31,8 @@ em {
   min-height: 100%;
   /* margin-bottom: -50px; */
   flex: 1 0 auto;
+  /* display: flex; */
+
 }
 
 .container h1{
@@ -41,11 +44,12 @@ em {
 }
 
 header{
-  background: #f4f4f4;
+  /* background: #f4f4f4; */
+  background: white;
   color: #ffffff;
   padding-top: 30px;
   min-height: 70px;
-  border-bottom: #F64C72 3px solid;
+  border-bottom: #F64C72 1px solid;
 }
 
 header a{
@@ -154,11 +158,16 @@ header nav{
 
 .meetup-box{
   padding-right: 20px;
+  margin-right: 10px;
+  margin-top: 10px;
   min-width: 300px;
   width:30%;
   text-align: center;
   align-items: center;
   float:left;
+  box-shadow: 0 0 5px 2px rgb(220, 220, 220);
+  /* border: 2px solid gray; */
+  border-radius: 4px;
 }
 
 .meetups :hover{
@@ -177,7 +186,10 @@ header nav{
 }
 
 .meetup-box a p{
-  text-decoration: none;
+  text-decoration-line: none;
+  font-weight: bold;
+  color: black;
+  font-size: 15px;
 }
 
 .admin{
@@ -222,7 +234,7 @@ footer{
 
 .loginbox{
   background: #ffffff;
-  border: 1px solid #F64C72;
+  /* border: 1px solid; */
   border-radius: 6px;
   height: auto;
   margin: 20px auto 0;
@@ -231,6 +243,7 @@ footer{
   padding-bottom: 50px;
   margin-top: 50px;
   margin-bottom: 50px;
+  box-shadow: 0 0 5px 2px rgb(220, 220, 220);
 }
 
 
@@ -248,7 +261,7 @@ footer{
 .loginbox input[type='email'], input[type="password"], input[type="text"]{
   border: none;
   border-radius: 4px;
-  border-bottom: 1px solid #F64C72;
+  border-bottom: 1px solid;
   /* background-color: #ffffff */
   background: transparent;
   outline: none;
