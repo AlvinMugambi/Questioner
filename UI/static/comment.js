@@ -23,7 +23,7 @@ function postComment(){
 
   var id = location.search.split('id=')[1];
 
-  let url = `http://127.0.0.1:5000/api/v2/questions/${id}/comment`
+  let url = `https://the-questioner-backend.herokuapp.com/api/v2/questions/${id}/comment`
 
   fetch(url, {
     method : 'POST',
@@ -47,7 +47,7 @@ function fetchComments(){
 
   var id = location.search.split('id=')[1]
 
-  let url = `http://127.0.0.1:5000/api/v2/questions/${id}/comments`
+  let url = `https://the-questioner-backend.herokuapp.com/api/v2/questions/${id}/comments`
 
   fetch(url, {
     method : 'GET',

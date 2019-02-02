@@ -5,7 +5,7 @@ function postQuestion(event){
 
   var id = location.search.split('id=')[1];
   console.log(id);
-  let url = `http://127.0.0.1:5000/api/v2/meetups/${id}/questions`;
+  let url = `https://the-questioner-backend.herokuapp.com/api/v2/meetups/${id}/questions`;
 
   fetch(url, {
     method : 'POST',
