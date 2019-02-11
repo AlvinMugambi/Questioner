@@ -63,10 +63,22 @@ function fetchComments(){
     var meetup_title = document.getElementById('meetup-title')
     meetup_title.innerHTML = "MY MEETUPS"
 
-    var question_title = document.getElementById('question')
-    question_title.innerHTML = data.data[0].title
+    if(data.status === 404){
+      var question_title = document.getElementById('question')
+      question_title.innerHTML = data.title
+
+      var question_body = document.getElementById('body')
+      question_body.innerHTML = data.body
+
+    }
 
     if(data.status === 200){
+
+      var question_title = document.getElementById('question')
+      question_title.innerHTML = data.data[0].title
+
+      var question_body = document.getElementById('body')
+      question_body.innerHTML = data.data[0].body
 
       var comments = document.getElementById('cont')
       var commentsNodes = document.createDocumentFragment()
@@ -80,11 +92,17 @@ function fetchComments(){
         commentNode.id = 'comments'
         commentNode.innerHTML = comment.comment
 
+        let postcommentNode = document.createElement('button')
+        postcommentNode.id = 'popup'
+        postcommentNode.type = 'button'
+        postcommentNode.innerHTML = comment.username
+
         let separatordivNode = document.createElement('hr')
         separatordivNode.className = 'separator'
 
 
         majordivNode.appendChild(commentNode)
+        majordivNode.appendChild(postcommentNode)
         commentsNodes.appendChild(majordivNode)
         commentsNodes.appendChild(separatordivNode)
 

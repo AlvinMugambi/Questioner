@@ -72,6 +72,7 @@ function fetchQuestions(){
           votespNode.textContent = `Votes: `
 
           var votesspanNode = document.createElement('span')
+          votesspanNode.id = 'votes'
           votesspanNode.textContent = question.votes
 
           var commentbuttonNode = document.createElement('div')
@@ -89,7 +90,6 @@ function fetchQuestions(){
           var imgNode = document.createElement('img')
           imgNode.id = 'close'
           imgNode.src = "../static/close.png"
-          // imgNode.addEventListener('click', div_hide)
 
           var boxtitleNode = document.createElement('h2')
           boxtitleNode.textContent = 'Comment'
@@ -97,29 +97,19 @@ function fetchQuestions(){
           var underlineNode = document.createElement('hr')
           underlineNode.className = 'separator'
 
-          var areacommentNode = document.createElement('textarea')
-          areacommentNode.id = 'msg'
-          areacommentNode.placeholder = 'Your comment here'
-
-          var anchorNode = document.createElement('a')
-          anchorNode.href = "javascript:%20check_empty()"
-          anchorNode.id = 'submit'
-          anchorNode.textContent = 'Send'
-
           var commentspageNode = document.createElement('div')
 
           var anchorcommentsNode = document.createElement('a')
           anchorcommentsNode.href = "../templates/comments_page.html?id=" + question.questionId
 
           var commentcountNode = document.createElement('h4')
-          commentcountNode.textContent = 'comments : 20'
+          commentcountNode.textContent = 'comments : '+ question.comments
 
           var postcommentNode = document.createElement('button')
           postcommentNode.id = 'popup'
           postcommentNode.type = 'button'
-          postcommentNode.innerHTML = 'comment'
+          postcommentNode.innerHTML = question.username
           postcommentNode.href = "../templates/top_questions.html?id=" + question.questionId
-          // postcommentNode.addEventListener('click', div_show)
 
           anchorcommentsNode.appendChild(commentcountNode)
           commentspageNode.appendChild(anchorcommentsNode)
@@ -127,8 +117,6 @@ function fetchQuestions(){
 
           formNode.appendChild(imgNode)
           formNode.appendChild(boxtitleNode)
-          formNode.appendChild(areacommentNode)
-          formNode.appendChild(anchorNode)
           commentformNode.appendChild(formNode)
           commentdivNode.appendChild(commentformNode)
           commentbuttonNode.appendChild(commentdivNode)
@@ -189,10 +177,10 @@ function upvote(){
   })
   .then((res) => res.json())
   .then((data ) => {
+    console.log(data);
     if (data.error){
       window.alert(data.error)
     }
-
   })
 }
 
