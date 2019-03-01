@@ -27,13 +27,13 @@ function Meetupdetails() {
       descriptionNode.innerHTML = data.data.description
 
       var locationNode = document.getElementById('location')
-      locationNode.innerHTML = `Location : ${data.data.meetupLocation}`
+      locationNode.innerHTML = `<strong>Location</strong> : ${data.data.meetupLocation}`
 
       var dateNode = document.getElementById('date')
-      dateNode.innerHTML = `Date : ${data.data.meetupDate}`
+      dateNode.innerHTML = `<strong>Date</strong> : ${data.data.meetupDate}`
 
       var attendeesNode = document.getElementById('attendees')
-      attendeesNode.innerHTML = `Atttendees : ${data.data.Attendees}`
+      attendeesNode.innerHTML = `<strong>Attendees</strong> : ${data.data.Attendees}`
 
       var post_question = document.getElementById('post-question-button')
       post_question.href = "../templates/post_question.html?id=" + data.data.meetupId
