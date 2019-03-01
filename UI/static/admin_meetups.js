@@ -4,6 +4,7 @@ function deleteMeetup(e) {
   e.preventDefault()
   var id = this.getAttribute('id');
 
+  if (confirm('Confirm delete?')){
   // DELETE
   let url = `https://the-questioner-backend.herokuapp.com/api/v2/meetups/${id}`;
   fetch(url, {
@@ -19,7 +20,8 @@ function deleteMeetup(e) {
       window.location.href = "../templates/admin_homepage.html";
     }
   })
-
+  } else{
+    alert('okay')}
 }
 
 function getMeetups(){
