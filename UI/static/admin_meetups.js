@@ -5,24 +5,24 @@ function deleteMeetup(e) {
   var id = this.getAttribute('id');
 
   if (confirm('Confirm delete?')){
-  // DELETE
-  let url = `https://the-questioner-backend.herokuapp.com/api/v2/meetups/${id}`;
-  fetch(url, {
-    method : 'DELETE',
-    headers : {
-      'Content-Type' : 'application/json',
-      'x-access-token' : `${localStorage.getItem('token')}`
-    }
-  })
-  .then((res) => res.json())
-  .then((data ) => {
-    if(data.status == 200){
-      window.location.href = "../templates/admin_homepage.html";
-    }
-  })
+    // DELETE
+    let url = `https://the-questioner-backend.herokuapp.com/api/v2/meetups/${id}`;
+    fetch(url, {
+      method : 'DELETE',
+      headers : {
+        'Content-Type' : 'application/json',
+        'x-access-token' : `${localStorage.getItem('token')}`
+      }
+    })
+    .then((res) => res.json())
+    .then((data ) => {
+      if(data.status == 200){
+        window.location.href = "../templates/admin_homepage.html";
+      }
+    })
   } else{
     alert('okay')}
-}
+  }
 
 function getMeetups(){
   let url = 'https://the-questioner-backend.herokuapp.com/api/v2/meetups/upcoming';
