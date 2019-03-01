@@ -4,6 +4,10 @@ function login(event){
   event.preventDefault();
   let url = 'https://the-questioner-backend.herokuapp.com/api/v2/auth/login';
 
+  var username = document.getElementById('username').value
+  var password = document.getElementById('password').value
+
+
   fetch(url, {
     method : 'POST',
     body : JSON.stringify({
@@ -18,7 +22,11 @@ function login(event){
   .then((data ) => {
     if (data.status === 200){
       localStorage.setItem('token', data.token);
-      window.location.href = "../templates/user_profile.html";
+      if (username == 'iamtheadmin'){
+        window.location.href = "../templates/admin_homepage.html";
+      } else {
+        window.location.href = "../templates/user_profile.html";
+      }
     } else if (data.data){
       window.alert(data.data)
     }
