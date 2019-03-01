@@ -166,6 +166,9 @@ function fetchQuestions(){
 function upvote(){
   var id = this.getAttribute('id');
 
+  var upvote = document.querySelector('.fa-thumbs-up')
+  upvote.style.color = 'green'
+
   let url = `https://the-questioner-backend.herokuapp.com/api/v2/questions/${id}/upvote`
 
   fetch(url, {
@@ -189,6 +192,9 @@ function upvote(){
 function downvote(){
   var id = this.getAttribute('id');
 
+  var downvote = document.querySelector('.fa-thumbs-down')
+  downvote.style.color = 'red'
+
   let url = `https://the-questioner-backend.herokuapp.com/api/v2/questions/${id}/downvote`
 
   fetch(url, {
@@ -199,7 +205,7 @@ function downvote(){
     }
   })
   .then((res) => res.json())
-  .then((data ) => {
+  .then((data ) =>{
     if (data.error){
       window.alert(data.error)
     }
